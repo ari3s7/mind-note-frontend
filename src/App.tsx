@@ -1,15 +1,18 @@
-
 import './App.css'
-import { Button } from "./components/ui/Button"
+import { Button } from './components/Button'
+import { Card } from './components/Card'
+import { PlusIcon } from './icons/PlusIcon'
+import { ShareIcon } from './icons/ShareIcon'
 
 function App() {
- 
-
   return (
     <>
-      <h1 className='text-blue-400'>Hello world</h1>
-      < Button variant="primary" size="lg" text="hello" onClick={() => {handleFuntion}} />
-     </>
+      <div className="">
+        <Button variant="primary" text="Add content" startIcon= {<PlusIcon />}/>
+        <Button variant="secondary" text="Share" startIcon = {<ShareIcon />}/>
+        <Card/>
+      </div>
+    </>
   )
 }
 
