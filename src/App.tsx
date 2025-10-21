@@ -7,11 +7,18 @@ import { ShareIcon } from './icons/ShareIcon'
 function App() {
   return (
     <>
-      <div className="">
-        <Button variant="primary" text="Add content" startIcon= {<PlusIcon />}/>
+      <div className="flex justify-end pr-4 py-3">
+        <div className='pr-3'>
+          <Button variant="primary" text="Add content" startIcon= {<PlusIcon />}/>
+        </div>
+        
         <Button variant="secondary" text="Share" startIcon = {<ShareIcon />}/>
-        <Card/>
       </div>
+      <div>
+        <Card />
+      </div>
+      
+      
     </>
   )
 }
