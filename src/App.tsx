@@ -15,7 +15,7 @@ function App() {
         <Button variant="secondary" text="Share" startIcon = {<ShareIcon />}/>
       </div>
       <div>
-        <Card />
+        <Card type="twitter" link="https://x.com/ThePrimeagen/status/1981422935538880756" title="first tweet" />
       </div>
       
       
