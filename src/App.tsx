@@ -1,17 +1,24 @@
+import { useState } from 'react'
 import './App.css'
 import { Button } from './components/Button'
 import { Card } from './components/Card'
 import { ContentModel } from './components/ContentModal'
 import { PlusIcon } from './icons/PlusIcon'
 import { ShareIcon } from './icons/ShareIcon'
+import { SideBar } from './components/SideBar'
 
 function App() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
-    <>
-    <ContentModel open={true} />
+  
+    <div>
+      <SideBar />
+   
+    <div className='p-4 min-h-screen bg-gray-100'>
+   <ContentModel open={modalOpen} onClose={() => {setModalOpen(false)}}/>
       <div className="flex justify-end pr-4 py-3">
         <div className='pr-3'>
-          <Button variant="primary" text="Add content" startIcon= {<PlusIcon />}/>
+          <Button variant="primary" text="Add content" onClick={() => setModalOpen(true)} startIcon= {<PlusIcon />}/>
         </div>
         
         <Button variant="secondary" text="Share" startIcon = {<ShareIcon />}/>
@@ -22,7 +29,11 @@ function App() {
       </div>
       
       
-    </>
+    
+</div>
+ </div>
+
+  
   )
 }
 
