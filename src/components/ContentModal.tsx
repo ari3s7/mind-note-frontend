@@ -5,7 +5,7 @@ import { Button } from "./Button"
 
 interface Modal {
     open: boolean;
-    onClose: () => {}
+    onClose: () => void
 }
 
 export function ContentModel ({open, onClose}: Modal) { 
@@ -14,7 +14,9 @@ export function ContentModel ({open, onClose}: Modal) {
         <div className="flex flex-col justify-center ">
                 <span className="bg-white opacity-100 p-80 rounded">
                 <div className="flex justify-end">
-                   <Cross/>
+                    <div onClick={onClose} className="cursor-pointer">
+                        <Cross/>
+                    </div>
                 </div>
                  <div>
                     <InputBox placeholder={"Title"}/>
