@@ -23,8 +23,11 @@ function Dashboard() {
         
         <Button variant="secondary" text="Share" startIcon = {<ShareIcon />}/>
       </div>
-      <div className='flex pt-15 pl-100'>
-        <Card type="twitter" link="https://x.com/ThePrimeagen/status/1981422935538880756" title="first tweet" />
+      <div className='flex pt-15 pl-20'>
+       
+          <Card type="twitter" link="https://x.com/ThePrimeagen/status/1981422935538880756" title="first tweet" />
+        
+        
         <Card type="youtube" link="https://www.youtube.com/watch?v=Oe_h_M7Drec" title="first video" />
       </div>
       
