@@ -6,9 +6,11 @@ import { ContentModel } from '../components/ContentModal'
 import { PlusIcon } from '../icons/PlusIcon'
 import { ShareIcon } from '../icons/ShareIcon'
 import { SideBar } from '../components/SideBar'
+import { useContent } from '../hooks/useContent'
 
 function Dashboard() {
   const [modalOpen, setModalOpen] = useState(false);
+  const contents = useContent();
   return (
   
     <div>
@@ -24,15 +26,13 @@ function Dashboard() {
         <Button variant="secondary" text="Share" startIcon = {<ShareIcon />}/>
       </div>
       <div className='flex pt-15 pl-20'>
+        {contents.map(({type, link, title}) => <Card
+         type={type}
+         link={link}
+         title={title}
+         />)}
        
-          <Card type="twitter" link="https://x.com/ThePrimeagen/status/1981422935538880756" title="first tweet" />
-        
-        
-        <Card type="youtube" link="https://www.youtube.com/watch?v=Oe_h_M7Drec" title="first video" />
-      </div>
-      
-      
-    
+      </div> 
 </div>
  </div>
 
